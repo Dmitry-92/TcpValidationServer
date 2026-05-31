@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpValidationServer", "TcpV
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpValidationHttpClient", "TcpValidationHttpClient\TcpValidationHttpClient.csproj", "{DFCC33C9-23ED-42A2-84E3-67753BB5E983}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpValidationAvaloniaClient", "TcpValidationAvaloniaClient\TcpValidationAvaloniaClient.csproj", "{3AEFB299-49AF-4CD8-9A93-0AE504A9AC69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{DFCC33C9-23ED-42A2-84E3-67753BB5E983}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFCC33C9-23ED-42A2-84E3-67753BB5E983}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFCC33C9-23ED-42A2-84E3-67753BB5E983}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AEFB299-49AF-4CD8-9A93-0AE504A9AC69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AEFB299-49AF-4CD8-9A93-0AE504A9AC69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AEFB299-49AF-4CD8-9A93-0AE504A9AC69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AEFB299-49AF-4CD8-9A93-0AE504A9AC69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
