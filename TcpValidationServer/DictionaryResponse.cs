@@ -1,6 +1,8 @@
 namespace TcpValidationServer;
 
-public class DictionaryResponse
+public  enum DictionaryResponse
 {
-    
+    OK,
+    BadRequest,
+    NotFoundResource
 }
