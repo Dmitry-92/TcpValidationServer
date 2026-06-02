@@ -1,9 +1,128 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="TcpValidationAvaloniaClient.MainWindow"
-        Title="TcpValidationAvaloniaClient">
-    Welcome to Avalonia!
+        Title="Клиент для TCP и HTTP серверов"
+        Width="700" Height="550"
+        MinWidth="600" MinHeight="450">
+    
+    <TabControl Margin="10">
+        
+        <!-- Вкладка 1: TCP сервер (ДЗ 1) -->
+        <TabItem Header="TCP Сервер (ДЗ 1)">
+            <StackPanel Spacing="10" Margin="10">
+                
+                <TextBlock Text="TCP Клиент для сервера с валидацией"
+                           FontSize="16"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"/>
+                
+                <TextBlock Text="Запрос (пример: GET /user):"
+                           FontWeight="Bold"/>
+                <TextBox x:Name="TcpRequestTextBox"
+                         Watermark="GET /user"
+                         Height="50"/>
+                
+                <Button x:Name="TcpSendButton"
+                        Content="Отправить"
+                        HorizontalAlignment="Center"
+                        Width="120"
+                        Background="DodgerBlue"/>
+                
+                <TextBlock Text="Результат:"
+                           FontWeight="Bold"
+                           Margin="0,10,0,0"/>
+                
+                <Border Background="#2A2A2A"
+                        CornerRadius="5"
+                        Padding="10"
+                        MinHeight="150">
+                    <TextBlock x:Name="TcpResultTextBlock"
+                               Text="Ожидание запроса..."
+                               TextWrapping="Wrap"/>
+                </Border>
+                
+                <TextBlock x:Name="TcpStatusTextBlock"
+                           Text="Статус: Не подключён"
+                           FontSize="11"
+                           Foreground="Gray"/>
+                
+            </StackPanel>
+        </TabItem>
+        
+        <!-- Вкладка 2: HTTP сервер книг (ДЗ 2) -->
+        <TabItem Header="HTTP Сервер книг (ДЗ 2)">
+            <StackPanel Spacing="10" Margin="10">
+                
+                <TextBlock Text="Работа с книгами (GET, POST, PUT, DELETE)"
+                           FontSize="16"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"/>
+                
+                <StackPanel Orientation="Horizontal"
+                            Spacing="10"
+                            Margin="0,10">
+                    <Button x:Name="HttpGetAllButton"
+                            Content="GET /book"
+                            Background="Green"/>
+                    <Button x:Name="HttpGetByIdButton"
+                            Content="GET /book/{id}"
+                            Background="Orange"/>
+                    <Button x:Name="HttpPostButton"
+                            Content="POST /book"
+                            Background="Purple"/>
+                    <Button x:Name="HttpPutButton"
+                            Content="PUT /book/{id}"
+                            Background="DarkCyan"/>
+                    <Button x:Name="HttpDeleteButton"
+                            Content="DELETE /book/{id}"
+                            Background="Red"/>
+                </StackPanel>
+                
+                <!-- Поля для ввода данных -->
+                <TextBlock Text="ID (для GET, PUT, DELETE):"
+                           FontWeight="Bold"/>
+                <TextBox x:Name="HttpIdTextBox"
+                         Watermark="Введите ID"
+                         Width="200"
+                         HorizontalAlignment="Left"/>
+                
+                <TextBlock Text="Название книги (name):"
+                           FontWeight="Bold"/>
+                <TextBox x:Name="HttpNameTextBox"
+                         Watermark="Война и мир"
+                         Width="300"
+                         HorizontalAlignment="Left"/>
+                
+                <TextBlock Text="Автор (author):"
+                           FontWeight="Bold"/>
+                <TextBox x:Name="HttpAuthorTextBox"
+                         Watermark="Лев Толстой"
+                         Width="300"
+                         HorizontalAlignment="Left"/>
+                
+                <TextBlock Text="Описание (description):"
+                           FontWeight="Bold"/>
+                <TextBox x:Name="HttpDescriptionTextBox"
+                         Watermark="Краткое описание книги"
+                         Width="400"
+                         Height="60"
+                         TextWrapping="Wrap"/>
+                
+                <TextBlock Text="Результат:"
+                           FontWeight="Bold"
+                           Margin="0,10,0,0"/>
+                
+                <Border Background="#2A2A2A"
+                        CornerRadius="5"
+                        Padding="10"
+                        MinHeight="120">
+                    <TextBlock x:Name="HttpResultTextBlock"
+                               Text="Ожидание запроса..."
+                               TextWrapping="Wrap"/>
+                </Border>
+                
+            </StackPanel>
+        </TabItem>
+        
+    </TabControl>
 </Window>
